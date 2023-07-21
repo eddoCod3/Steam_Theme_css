@@ -1,0 +1,56 @@
+---
+
+interface Props{
+    img: string;
+}
+const {img} = Astro.props;
+
+---
+<section class="section_show_descritpion">
+
+ 
+    <div class="img_show_descritpion">
+            <img src={img} alt="" class="img_show_descritpion--game" >
+    </div>
+    <div>
+        <h2 class="main_title_descritpion">Quality experience</h2>
+        <p class="text_show_descritpion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quis delectus voluptate at? Cum quidem minima voluptate illum suscipit, veritatis recusandae ad voluptatibus nam atque obcaecati modi vel quasi deleniti.
+        Fugiat ipsum sapiente neque nesciunt doloramet. Nihil sunt nam repudiandae iste voluptatum, quae saepe, cupiditate molestiae, officia sint quibusdam laborum.</p>
+    </div>
+</section>
+
+<style>
+    *,*::before,*::after{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .section_show_descritpion{
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-auto-rows: minmax(100px, auto);
+        gap: 1rem;
+        margin: 1.5rem;
+    }
+    .img_show_descritpion--game{
+        width:100%;
+        box-shadow: 0 0 15px #05132b;
+        transition: all 300ms;
+    }
+    .img_show_descritpion--game:hover{
+        scale: 1.02;
+        
+    }
+    .img_show_descritpion{
+       grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    .text_show_descritpion{
+        word-wrap: break-word;
+        color: #99959a;
+
+    }
+    .main_title_descritpion{
+        color: #00abed;
+    }
+</style>

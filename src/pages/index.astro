@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeftCard from '../components/LeftCard.astro';
+import RightCard from '../components/RightCard.astro';
+import gameDead from "/images/gamedead.jpg";
+import gameCounter from "/images/gamecounter.jpg";
+import gameBatman from "/images/batman.jpg"
+import gameBesi from "/images/gamebesi.jpg"
+import MainHero from '../components/MainHero.astro';
+import Tabs from '../components/Tabs.astro';
+
+
+
+---
+
+<Layout title="Steam clone">
+
+	<main class="hero_section">
+		
+		<!-- <section >
+			<img src="/images/games.jpg" alt="" class="img_hero"> 
+			<p>something	</p>
+		</section> -->
+		<Tabs/>
+		<MainHero/>
+		<LeftCard img={gameDead} />
+		<RightCard img={gameBatman}/>
+		<LeftCard  img={gameCounter}/>
+		<RightCard img={gameBesi}/>
+			
+	</main>
+	
+</Layout>
+
+<style>
+	.hero_section{
+		background-color: #030920;
+		
+	}
+	.img_hero{
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		position: absolute;
+	}
+	.container_hero-image{
+		background-color: #030920;
+	}
+
+
+	
+ 
+</style>
